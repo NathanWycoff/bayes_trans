@@ -1,8 +1,17 @@
+This repository accompanies the forthcoming article:
 
+***Formal Bayesian Transfer Learning via the Total Risk Prior***
 
-import numpy as np
-#exec(open("python/bayes_lib.py").read())
+It may be installed via pip + github:
+```
+pip install git+https://github.com/NathanWycoff/bayes_trans/
+```
+
+Example usage:
+
+```python
 from bayes_trans import bayes_trans
+import numpy as np
 
 # Synthetic data settings
 sigma = 0.5
@@ -35,4 +44,4 @@ beta0_naive = np.linalg.lstsq(Xs[0], ys[0])[0]
 print(f"OLS Estimation Error: {np.sum(np.square(beta0_naive-betas[0]))}")
 print(f"Transfer Learning Estimation Error: {np.sum(np.square(beta0_trans-betas[0]))}")
 
-
+```
