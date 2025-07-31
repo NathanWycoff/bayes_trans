@@ -18,7 +18,6 @@ sigma = 0.5
 Ns = [5, 20, 20]
 Ntest = 1000
 P = 4
-K = len(Ns)-1 # Number of source datasets, so one less than total number.
 
 # Assume shared coef.
 beta_targ = np.random.normal(size=P)
@@ -26,9 +25,9 @@ beta_other = np.random.normal(size=P)
 betas = [beta_targ, beta_targ, beta_other]
 
 # Generate data
-Xs = [np.random.normal(size=[Ns[k],P]) for k in range(K)]
+Xs = [np.random.normal(size=[Ns[k],P]) for k in range(len(Ns))]
 XX0 = np.random.normal(size=[Ns[0],P])
-ys = [Xs[k] @ betas[k] + sigma*np.random.normal(size=Ns[k]) for k in range(K)]
+ys = [Xs[k] @ betas[k] + sigma*np.random.normal(size=Ns[k]) for k in range(len(Ns))]
 
 # !!! Make sure your real X and y data have been centered and scaled ("z-scored")!!!
 
