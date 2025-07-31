@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bayes_trans"
+version = "0.1.0"
+authors = [{name = "Nathan Wycoff", email = "nwycoff@umass.edu"}]
+description = "Bayesian transfer learning for linear regression via the Total Risk Prior."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=2.2.3",
+    "tqdm",
+    "matplotlib>=3.10.0",
+    "jax>=0.4.35",
+    "tfp-nightly==0.26.0.dev20250324",
+]
+
+[project.urls]
+Homepage = "https://github.com/NathanWycoff/bayes_trans"

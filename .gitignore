@@ -1,0 +1,11 @@
+
+*.swp
+*.swo
+
+*.pyc
+
+src/bayes_trans.egg-info
+src/bayes_trans.egg-info/*
+
+dist/*
+dist
