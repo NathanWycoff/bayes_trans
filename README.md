@@ -1,6 +1,6 @@
-This repository accompanies the forthcoming article:
+This repository accompanies the preprint:
 
-***Formal Bayesian Transfer Learning via the Total Risk Prior***
+***[Formal Bayesian Transfer Learning via the Total Risk Prior](https://arxiv.org/abs/2507.23768)***
 
 It may be installed via pip + github:
 ```
