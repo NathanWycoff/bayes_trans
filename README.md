@@ -10,8 +10,10 @@ pip install git+https://github.com/NathanWycoff/bayes_trans/
 Example usage:
 
 ```python
-from bayes_trans import bayes_trans
+
 import numpy as np
+#exec(open("python/bayes_lib.py").read())
+from bayes_trans import bayes_trans
 
 # Synthetic data settings
 sigma = 0.5
@@ -38,9 +40,11 @@ beta0_trans, tracking, switch_rates = bayes_trans(Xs, ys)
 # tracking - MCMC trace for all variables.
 # switch_rates - Parellel tempering exchange proposal acceptance rates.
 
-beta0_naive = np.linalg.lstsq(Xs[0], ys[0])[0]
+beta0_target = np.linalg.lstsq(Xs[0], ys[0])[0]
+beta0_pooled = np.linalg.lstsq(np.concatenate(Xs), np.concatenate(ys))[0]
 
-print(f"OLS Estimation Error: {np.sum(np.square(beta0_naive-betas[0]))}")
+print(f"Target only OLS Estimation Error: {np.sum(np.square(beta0_target-betas[0]))}")
+print(f"Pooled OLS Estimation Error: {np.sum(np.square(beta0_pooled-betas[0]))}")
 print(f"Transfer Learning Estimation Error: {np.sum(np.square(beta0_trans-betas[0]))}")
 
 ```
