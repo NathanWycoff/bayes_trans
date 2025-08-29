@@ -37,7 +37,7 @@ beta0_trans, tracking, switch_rates = bayes_trans(Xs, ys)
 
 # beta0_trans - Estimate of target data coefficients.
 # tracking - MCMC trace for all variables.
-# switch_rates - Parellel tempering exchange proposal acceptance rates.
+# switch_rates - Parallel tempering exchange proposal acceptance rates.
 
 beta0_target = np.linalg.lstsq(Xs[0], ys[0])[0]
 beta0_pooled = np.linalg.lstsq(np.concatenate(Xs), np.concatenate(ys))[0]
