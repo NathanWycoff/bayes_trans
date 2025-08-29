@@ -12,7 +12,6 @@ Example usage:
 ```python
 
 import numpy as np
-#exec(open("python/bayes_lib.py").read())
 from bayes_trans import bayes_trans
 
 # Synthetic data settings
