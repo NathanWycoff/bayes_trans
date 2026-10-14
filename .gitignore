@@ -9,3 +9,6 @@ src/bayes_trans.egg-info/*
 
 dist/*
 dist
+
+build/*
+build

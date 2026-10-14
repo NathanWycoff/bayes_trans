@@ -47,3 +47,11 @@ print(f"Pooled OLS Estimation Error: {np.sum(np.square(beta0_pooled-betas[0]))}"
 print(f"Transfer Learning Estimation Error: {np.sum(np.square(beta0_trans-betas[0]))}")
 
 ```
+
+## Changes in 0.2.0
+
+The defaults are now `rb='betasig'` and `comp_prior='shear'`. With `comp_prior='shear'`, the prior's normalizing constant does not depend on the source-inclusion indicators. To reproduce 0.1.0 behavior, pass `rb='none', comp_prior='orth'`.
+
+## Data
+
+The JAM3 gene expression data used in the preprint are available as a [release asset](https://github.com/NathanWycoff/bayes_trans/releases/tag/v0.2.0). See [data/README.md](data/README.md).
