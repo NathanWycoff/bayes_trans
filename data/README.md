@@ -6,7 +6,7 @@ The data are 36 CSV files, one per tissue (`0001.csv`, `0005.csv`, ...). Each fi
 - The `JAM3` column is the response: expression of the JAM3 gene.
 - The remaining 399 columns are the predictors: expression of the other genes. They are the same in every file.
 
-These are the data used for the real-data example in the preprint. They follow the GTEx JAM3 application of Li, Cai & Li (2022), "Transfer learning for high-dimensional linear regression".
+These are the data used for the real-data example in the preprint. They generally follow the GTEx JAM2 application of Li, Cai & Li (2022), "Transfer learning for high-dimensional linear regression", but for different tissues/genes.
 
 ## Download
 
